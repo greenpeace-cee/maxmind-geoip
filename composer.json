@@ -1,5 +1,5 @@
 {
-    "name": "geoipgreenpeace-cee/maxmind-geoip",
+    "name": "greenpeace-cee/maxmind-geoip",
     "type": "symfony-bundle",
     "description": "MaxMind GeoIP Bundle",
     "keywords": ["maxmind geoip"],
