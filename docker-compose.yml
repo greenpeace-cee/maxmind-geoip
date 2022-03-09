@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  php:
+    image: maxmind-geoip/php:5.6-fpm
+    container_name: maxmind-geoip-php
+    build:
+      context: docker/build/php5.6
+    volumes:
+      - ./:/var/www/html
+      - ~/.docker/maxmind/geoip/composer:/root/.composer
