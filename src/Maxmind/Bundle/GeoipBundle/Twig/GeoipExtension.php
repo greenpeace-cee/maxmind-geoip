@@ -7,12 +7,13 @@
 namespace Maxmind\Bundle\GeoipBundle\Twig;
 
 use Maxmind\Bundle\GeoipBundle\Service\GeoipManager;
-use Twig_Environment;
+use Twig\Extension\AbstractExtension;
+// use Twig_Environment;
 
 /**
  * Class GeoipExtension.
  */
-class GeoipExtension extends \Twig_Extension
+class GeoipExtension extends AbstractExtension
 {
     /**
      * @var GeoipManager

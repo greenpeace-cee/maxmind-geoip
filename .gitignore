@@ -2,3 +2,4 @@ data/*.dat
 *~
 vendor
 *.lock
+.idea

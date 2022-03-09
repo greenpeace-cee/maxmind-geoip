@@ -17,8 +17,14 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('maxmind_geoip');
+        $treeBuilder = new TreeBuilder('maxmind_geoip');
+    
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $rootNode = $treeBuilder->root('maxmind_geoip');
+        }
 
         $path = realpath(__DIR__.'/../../../../../data/GeoLiteCity.dat');
 
