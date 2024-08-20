@@ -36,14 +36,14 @@ class GeoipExtension extends AbstractExtension
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('geoip', array($this, 'geoipFilter')),
+            new \Twig\TwigFilter('geoip', array($this, 'geoipFilter')),
         );
     }
 
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
+            new \Twig\TwigFunction(
                 'code',
                 array($this, 'getCode'),
                 array(
